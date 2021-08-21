@@ -1,3 +1,104 @@
+@extends('layouts.user.main')
+
+@section('title', 'Авторизация')
+
+@section('body')
+  <body class="page home page-template-default">
+  @endsection
+
+  @section('content')
+    <div id="content" class="site-content">
+      <div class="col-full">
+        <div class="row">
+          <nav class="woocommerce-breadcrumb">
+            <a href="home-v1.html">Home</a>
+            <span class="delimiter">
+                        <i class="tm tm-breadcrumbs-arrow-right"></i>
+                    </span>My Account
+          </nav>
+          <!-- .woocommerce-breadcrumb -->
+          <div id="primary" class="content-area">
+            <main id="main" class="site-main">
+              <div class="type-page hentry">
+                <div class="entry-content">
+                  <div class="woocommerce">
+                    <div class="customer-login-form">
+                      <div id="customer_login" class="u-columns col2-set">
+                        <div class="u-column1 col-1">
+                          <h2>{{ __('Login') }}</h2>
+                          <form method="post" action="{{ route('login') }}"
+                                class="woocomerce-form woocommerce-form-login login">
+                            @csrf
+                            <p class="before-login-text">
+                              Vestibulum lacus magna, faucibus vitae dui eget, aliquam
+                              fringilla. In et commodo elit. Class aptent taciti sociosqu
+                              ad litora.
+                            </p>
+                            <p class="form-row form-row-wide">
+                              <label for="email">{{ __('E-Mail Address') }}
+                                <span class="required">*</span>
+                              </label>
+                              <input type="text" class="input-text @error('email') is-invalid @enderror" name="email"
+                                     id="email" value="{{ old('email') }}"/>
+                              @error('email')
+                              <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                              @enderror
+                            </p>
+                            <p class="form-row form-row-wide">
+                              <label for="password">{{ __('Password') }}
+                                <span class="required">*</span>
+                              </label>
+                              <input class="input-text @error('password') is-invalid @enderror" type="password" name="password"
+                                     id="password" />
+                              @error('password')
+                              <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                              @enderror
+                            </p>
+                            <p class="form-row">
+                              <input class="woocommerce-Button button" type="submit"
+                                     value="{{ __('Login') }}" name="login">
+                              <label for="remember"
+                                     class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
+                                <input
+                                  class="woocommerce-form__input woocommerce-form__input-checkbox"
+                                  name="remember" type="checkbox" id="remember"
+                                  value="forever" {{ old('remember') ? 'checked' : '' }} /> {{ __('Remember Me') }}
+                              </label>
+                            </p>
+                            @if (Route::has('password.request'))
+                              <p class="woocommerce-LostPassword lost_password">
+                                <a href="{{ route('password.request') }}">{{ __('Lost your password?') }}</a>
+                              </p>
+                            @endif
+
+                          </form>
+                        </div>
+                      </div>
+                      <!-- .col2-set -->
+                    </div>
+                    <!-- .customer-login-form -->
+                  </div>
+                  <!-- .woocommerce -->
+                </div>
+                <!-- .entry-content -->
+              </div>
+              <!-- .hentry -->
+            </main>
+            <!-- #main -->
+          </div>
+          <!-- #primary -->
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .col-full -->
+    </div>
+@endsection
+
+{{--
 @extends('layouts.app')
 
 @section('content')
@@ -71,3 +172,4 @@
     </div>
 </div>
 @endsection
+--}}

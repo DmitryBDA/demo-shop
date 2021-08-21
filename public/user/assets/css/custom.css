@@ -1,0 +1,6 @@
+.is-invalid{
+  border: solid 1px red!important;
+}
+.invalid-feedback{
+  display: block;
+}

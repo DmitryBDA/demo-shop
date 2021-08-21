@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="user/assets/css/animate.min.css" media="all" />
     <link rel="stylesheet" type="text/css" href="user/assets/css/style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="user/assets/css/colors/blue.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="user/assets/css/custom.css" media="all" />
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,900" rel="stylesheet">
     <link rel="shortcut icon" href="user/assets/images/fav-icon.png">
@@ -64,10 +65,24 @@
                     </ul>
                     <!-- .dropdown-menu -->
                 </li>
+              @auth
                 <li class="menu-item">
-                    <a title="My Account" href="login-and-register.html">
-                        <i class="tm tm-login-register"></i>Register or Sign in</a>
+                  <a title="Logout" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                 </li>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf
+                </form>
+              @endauth
+
+              @guest
+                <li class="menu-item">
+                  <a title="Sign in" href="{{route('login')}}">Sign in</a>
+                </li>
+                <li class="menu-item">
+                  <a title="Register" href="login-and-register.html">Register</a>
+                </li>
+              @endguest
+
             </ul>
             <!-- .nav -->
         </div>
