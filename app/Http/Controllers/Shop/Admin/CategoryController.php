@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Shop\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Repositories\CategoryRepository;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -13,9 +14,9 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(CategoryRepository $categoryRepository)
     {
-      $categoryList = Category::all();
+      $categoryList = $categoryRepository->getAllWithPaginate(25);
 
       return view('pages.admin.categories.index', compact('categoryList'));
     }

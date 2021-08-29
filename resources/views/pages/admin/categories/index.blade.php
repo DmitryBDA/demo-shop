@@ -82,7 +82,7 @@
                             <td class="sorting_1 dtr-control" tabindex="0" style="">{{$category->id}}</td>
                             <td style="">{{$category->name}}</td>
                             <td style="">{{$category->slug}}</td>
-                            <td class="">{{$category->parent_id}}</td>
+                            <td class="">{{$category->parentTitle}}</td>
                             <td>{{$category->active}}</td>
                           </tr>
                         @endforeach
