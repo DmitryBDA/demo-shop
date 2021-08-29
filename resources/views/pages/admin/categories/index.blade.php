@@ -60,115 +60,34 @@
                         <tr role="row">
                           <th class="sorting sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                               aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending"
-                              style="">Rendering engine
+                              style="">ID
                           </th>
                           <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                              aria-label="Browser: activate to sort column ascending" style="">Browser
+                              aria-label="Browser: activate to sort column ascending" style="">Название
                           </th>
                           <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                              aria-label="Platform(s): activate to sort column ascending" style="">Platform(s)
+                              aria-label="Platform(s): activate to sort column ascending" style="">Slug
                           </th>
                           <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                              aria-label="Engine version: activate to sort column ascending">Engine version
+                              aria-label="Engine version: activate to sort column ascending">Родитель
                           </th>
                           <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                              aria-label="CSS grade: activate to sort column ascending">CSS grade
+                              aria-label="CSS grade: activate to sort column ascending">Активный
                           </th>
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($categoryList as $category)
+                          <tr class="odd">
+                            <td class="sorting_1 dtr-control" tabindex="0" style="">{{$category->id}}</td>
+                            <td style="">{{$category->name}}</td>
+                            <td style="">{{$category->slug}}</td>
+                            <td class="">{{$category->parent_id}}</td>
+                            <td>{{$category->active}}</td>
+                          </tr>
+                        @endforeach
 
 
-                        <tr class="odd">
-
-
-                          <td class="sorting_1 dtr-control" tabindex="0" style="">Gecko</td>
-                          <td style="">Firefox 1.0</td>
-                          <td style="">Win 98+ / OSX.2+</td>
-                          <td class="">1.7</td>
-                          <td>A</td>
-                        </tr>
-                        <tr class="even">
-
-
-                          <td class="sorting_1 dtr-control" tabindex="0" style="">Gecko</td>
-                          <td style="">Firefox 1.5</td>
-                          <td style="">Win 98+ / OSX.2+</td>
-                          <td class="">1.8</td>
-                          <td>A</td>
-                        </tr>
-                        <tr class="odd">
-
-
-                          <td class="sorting_1 dtr-control" tabindex="0" style="">Gecko</td>
-                          <td style="">Firefox 2.0</td>
-                          <td style="">Win 98+ / OSX.2+</td>
-                          <td class="">1.8</td>
-                          <td>A</td>
-                        </tr>
-                        <tr class="even">
-
-
-                          <td class="sorting_1 dtr-control" tabindex="0" style="">Gecko</td>
-                          <td style="">Firefox 3.0</td>
-                          <td style="">Win 2k+ / OSX.3+</td>
-                          <td class="">1.9</td>
-                          <td>A</td>
-                        </tr>
-                        <tr class="odd">
-
-
-                          <td class="sorting_1 dtr-control" style="">Gecko</td>
-                          <td style="">Camino 1.0</td>
-                          <td style="">OSX.2+</td>
-                          <td class="">1.8</td>
-                          <td>A</td>
-                        </tr>
-                        <tr class="even">
-
-
-                          <td class="sorting_1 dtr-control" style="">Gecko</td>
-                          <td style="">Camino 1.5</td>
-                          <td style="">OSX.3+</td>
-                          <td class="">1.8</td>
-                          <td>A</td>
-                        </tr>
-                        <tr class="odd">
-
-
-                          <td class="sorting_1 dtr-control" style="">Gecko</td>
-                          <td style="">Netscape 7.2</td>
-                          <td style="">Win 95+ / Mac OS 8.6-9.2</td>
-                          <td class="">1.7</td>
-                          <td>A</td>
-                        </tr>
-                        <tr class="even">
-
-
-                          <td class="sorting_1 dtr-control" style="">Gecko</td>
-                          <td style="">Netscape Browser 8</td>
-                          <td style="">Win 98SE+</td>
-                          <td class="">1.7</td>
-                          <td>A</td>
-                        </tr>
-                        <tr class="odd">
-
-
-                          <td class="sorting_1 dtr-control" style="">Gecko</td>
-                          <td style="">Netscape Navigator 9</td>
-                          <td style="">Win 98+ / OSX.2+</td>
-                          <td class="">1.8</td>
-                          <td>A</td>
-                        </tr>
-                        <tr class="even">
-
-
-                          <td class="sorting_1 dtr-control" style="">Gecko</td>
-                          <td style="">Mozilla 1.0</td>
-                          <td style="">Win 95+ / OSX.1+</td>
-                          <td class="">1</td>
-                          <td>A</td>
-                        </tr>
                         </tbody>
                         <tfoot>
                         <tr>
