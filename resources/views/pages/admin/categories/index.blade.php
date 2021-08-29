@@ -42,7 +42,7 @@
                 <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
                   <div class="row">
                     <div class="col-sm-12 col-md-1">
-                      <a href="#" class="btn btn-block btn-primary">Создать</a>
+                      <a href="{{route('categories.create')}}" class="btn btn-block btn-primary">Создать</a>
                     </div>
                     <div class="col-sm-12 col-md-11">
                       <div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search"

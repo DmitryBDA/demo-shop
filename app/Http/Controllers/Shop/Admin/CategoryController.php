@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Shop\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -24,7 +25,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.categories.create');
     }
 
     /**
@@ -35,7 +36,21 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+      $data = $request->input();
+
+      $category = (new Category())->create($data);
+
+      if($category){
+        return redirect()
+          ->route('categories.index')
+          ->with(['success' => 'Успешно сохранено']);
+      } else {
+        return back()
+          ->withErrors(['msg' => "Ошибка сохранения"])
+          ->withInput();
+      }
+
     }
 
     /**
