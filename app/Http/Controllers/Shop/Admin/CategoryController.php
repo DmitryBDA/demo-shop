@@ -83,16 +83,29 @@ class CategoryController extends Controller
         return view('pages.admin.categories.edit', compact('obCategory', 'categoryList'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        //
+      $obCategory = $this->categoryRepository->getEdit($id);
+      if(empty($obCategory)){
+        return back()
+          ->withErrors(['msg' => "Запись id={$id} не найдена"])
+          ->withInput();
+      }
+
+      $data = $request->all();
+
+      $result = $obCategory->update($data);
+
+      if($result){
+        return redirect()
+          ->route('categories.edit', $obCategory->id)
+          ->with(['success' => 'Успешно сохранено']);
+      } else {
+        return back()
+          ->withErrors(['msg' => "Ошибка сохранения"])
+          ->withInput();
+      }
     }
 
     /**

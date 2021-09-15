@@ -38,11 +38,12 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Quick Example</h3>
+                <h3 class="card-title">Данные</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form method="post" action="{{route('categories.update', $obCategory->id)}}">
+                @method('PUT')
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
@@ -53,7 +54,7 @@
                   </div>
                   <div class="form-group">
                     <label for="name">Название</label>
-                    <input type="name" class="form-control" id="name" name="name" value="{{$obCategory->name}}" placeholder="Введите название">
+                    <input type="text" class="form-control" id="name" name="name" value="{{$obCategory->name}}" placeholder="Введите название">
                   </div>
                   <div class="form-group">
                     <label>Родитель</label>
@@ -65,7 +66,7 @@
                   </div>
                   <div class="form-group">
                     <label for="slug">Slug</label>
-                    <input type="slug" class="form-control" id="slug" name="slug" value="{{$obCategory->slug}}" placeholder="Введите slug">
+                    <input type="text" class="form-control" id="slug" name="slug" value="{{$obCategory->slug}}" placeholder="Введите slug">
                   </div>
                   <div class="form-group">
                     <label>Краткое описание</label>
@@ -89,7 +90,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Создать</button>
+                  <button type="submit" class="btn btn-primary">Обновить</button>
                 </div>
               </form>
             </div>
