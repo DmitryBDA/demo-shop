@@ -9,14 +9,17 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
-     */
-    public function index(CategoryRepository $categoryRepository)
+    protected $categoryRepository;
+
+    public function __construct()
     {
-      $categoryList = $categoryRepository->getAllWithPaginate(25);
+      $this->categoryRepository = app(CategoryRepository::class);
+
+    }
+
+  public function index()
+    {
+      $categoryList = $this->categoryRepository->getAllWithPaginate(25);
 
       return view('pages.admin.categories.index', compact('categoryList'));
     }
@@ -26,9 +29,9 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function create(CategoryRepository $categoryRepository)
+    public function create()
     {
-        $categoryList = $categoryRepository->getForComboBox();
+        $categoryList = $this->categoryRepository->getForComboBox();
 
 
         return view('pages.admin.categories.create', compact('categoryList'));
@@ -70,15 +73,14 @@ class CategoryController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
-        //
+        $obCategory = $this->categoryRepository->getEdit($id);
+
+        $categoryList = $this->categoryRepository->getForComboBox();
+
+        return view('pages.admin.categories.edit', compact('obCategory', 'categoryList'));
     }
 
     /**

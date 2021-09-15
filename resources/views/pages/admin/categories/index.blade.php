@@ -80,7 +80,7 @@
                         @foreach($categoryList as $category)
                           <tr class="odd">
                             <td class="sorting_1 dtr-control" tabindex="0" style="">{{$category->id}}</td>
-                            <td style="">{{$category->name}}</td>
+                            <td style=""><a href="{{route('categories.edit', $category->id)}}">{{$category->name}}</a></td>
                             <td style="">{{$category->slug}}</td>
                             <td class="">{{$category->parentTitle}}</td>
                             <td>{{$category->active}}</td>
