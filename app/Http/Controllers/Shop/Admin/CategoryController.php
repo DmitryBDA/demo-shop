@@ -56,7 +56,7 @@ class CategoryController extends Controller
           ->with(['success' => 'Успешно сохранено']);
       } else {
         return back()
-          ->withErrors(['msg' => "Ошибка сохранения"])
+          ->with(['error' => "Ошибка сохранения"])
           ->withInput();
       }
 
@@ -86,10 +86,10 @@ class CategoryController extends Controller
 
     public function update(Request $request, $id)
     {
-      $obCategory = $this->categoryRepository->getEdit($id);
+      $obCategory = $this->categoryRepository->getEdit(745);
       if(empty($obCategory)){
         return back()
-          ->withErrors(['msg' => "Запись id={$id} не найдена"])
+          ->with(['error' => "Запись id={$id} не найдена"])
           ->withInput();
       }
 
@@ -103,7 +103,7 @@ class CategoryController extends Controller
           ->with(['success' => 'Успешно сохранено']);
       } else {
         return back()
-          ->withErrors(['msg' => "Ошибка сохранения"])
+          ->with(['error' => "Ошибка сохранения"])
           ->withInput();
       }
     }
