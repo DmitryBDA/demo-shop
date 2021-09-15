@@ -19,9 +19,9 @@ class CategoryController extends Controller
 
   public function index()
     {
-      $categoryList = $this->categoryRepository->getAllWithPaginate(25);
+      $paginator = $this->categoryRepository->getAllWithPaginate(5);
 
-      return view('pages.admin.categories.index', compact('categoryList'));
+      return view('pages.admin.categories.index', compact('paginator'));
     }
 
     /**
