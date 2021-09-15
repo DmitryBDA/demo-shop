@@ -58,11 +58,9 @@
                   <div class="form-group">
                     <label>Родитель</label>
                     <select class="form-control" name="parent_id">
-                      <option value="1">option 1</option>
-                      <option value="2">option 2</option>
-                      <option value="3">option 3</option>
-                      <option value="4">option 4</option>
-                      <option value="5">option 5</option>
+                      @foreach($categoryList as $category)
+                        <option value="{{$category->id}}">{{$category->id_name}}</option>
+                      @endforeach
                     </select>
                   </div>
                   <div class="form-group">

@@ -36,7 +36,7 @@
                               <label for="name">{{ __('Name') }}
                                 <span class="required">*</span>
                               </label>
-                              <input type="email" value="{{ old('name') }}" id="name" name="name" class="woocommerce-Input @error('name') is-invalid @enderror woocommerce-Input--text input-text">
+                              <input type="text" value="{{ old('name') }}" id="name" name="name" class="woocommerce-Input @error('name') is-invalid @enderror woocommerce-Input--text input-text">
                               @error('name')
                               <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
