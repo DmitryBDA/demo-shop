@@ -22,20 +22,20 @@
              aria-describedby="example1_info">
         <thead>
         <tr role="row">
-          <th class="sorting sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+          <th class="sorting @if($fieldTek == 'id')sorting_{{$ascOrDesc}}@endif "  wire:click="sortBy('id')" :direction="$sortField === 'id' ? $sortDirection : null "  tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
               aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending"
               style="">ID
           </th>
-          <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+          <th class="sorting @if($fieldTek == 'name')sorting_{{$ascOrDesc}}@endif" wire:click="sortBy('name')" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
               aria-label="Browser: activate to sort column ascending" style="">Название
           </th>
-          <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+          <th class="sorting @if($fieldTek == 'slug')sorting_{{$ascOrDesc}}@endif" wire:click="sortBy('slug')" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
               aria-label="Platform(s): activate to sort column ascending" style="">Slug
           </th>
-          <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+          <th class="sorting @if($fieldTek == 'parent_id')sorting_{{$ascOrDesc}}@endif" wire:click="sortBy('parent_id')" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
               aria-label="Engine version: activate to sort column ascending">Родитель
           </th>
-          <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+          <th class="sorting @if($fieldTek == 'active')sorting_{{$ascOrDesc}}@endif" wire:click="sortBy('active')" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
               aria-label="CSS grade: activate to sort column ascending">Активный
           </th>
         </tr>
