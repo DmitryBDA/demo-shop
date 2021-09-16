@@ -255,5 +255,6 @@
 <!-- AdminLTE App -->
 <script src="{{asset('adm/dist/js/adminlte.js')}}"></script>
 @yield('custom_js')
+@livewireScripts
 </body>
 </html>
