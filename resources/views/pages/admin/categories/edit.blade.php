@@ -44,7 +44,7 @@
 
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="{{route('categories.update', $obCategory->id)}}">
+              <form method="post" action="{{route('categories.update', $obCategory->id)}}" enctype="multipart/form-data">
                 @method('PUT')
                 @csrf
                 <div class="card-body">
@@ -77,18 +77,17 @@
                     <label>Полное описание</label>
                     <textarea class="form-control" name="description" rows="4" placeholder="Enter ...">{{$obCategory->description}}</textarea>
                   </div>
-                {{--  <div class="form-group">
+                  <div class="form-group">
                     <label for="exampleInputFile">Изображение</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
+                        <input type="file" name="image" class="custom-file-input" id="image">
+                        <label class="custom-file-label" for="image">Choose file</label>
                       </div>
                     </div>
-                  </div>--}}
+                  </div>
+
+                  <img src="{{Storage::url($obCategory->image)}}" width="200px" alt="">
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">

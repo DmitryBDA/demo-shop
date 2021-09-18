@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Repositories\CategoryRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -45,9 +46,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+      $path = $request->file('image')->store('categories');
 
       $data = $request->input();
-
+      $data['image'] = $path;
       $category = Category::create($data);
 
       if($category){
@@ -86,14 +88,17 @@ class CategoryController extends Controller
 
     public function update(Request $request, $id)
     {
-      $obCategory = $this->categoryRepository->getEdit(745);
+      $obCategory = $this->categoryRepository->getEdit($id);
       if(empty($obCategory)){
         return back()
           ->with(['error' => "Запись id={$id} не найдена"])
           ->withInput();
       }
+      Storage::delete($obCategory->image);
+      $path = $request->file('image')->store('categories');;
 
-      $data = $request->all();
+      $data = $request->input();
+      $data['image'] = $path;
 
       $result = $obCategory->update($data);
 

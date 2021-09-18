@@ -42,7 +42,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="{{route('categories.store')}}">
+              <form method="post" action="{{route('categories.store')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
@@ -74,18 +74,15 @@
                     <label>Полное описание</label>
                     <textarea class="form-control" name="description" rows="4" placeholder="Enter ..."></textarea>
                   </div>
-                {{--  <div class="form-group">
+                  <div class="form-group">
                     <label for="exampleInputFile">Изображение</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <input type="file" name="image" class="custom-file-input" id="exampleInputFile">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
                     </div>
-                  </div>--}}
+                  </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">

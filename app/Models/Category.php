@@ -17,6 +17,7 @@ class Category extends Model
       'parent_id',
       'description',
       'preview_text',
+      'image',
       'active',
     ];
 
