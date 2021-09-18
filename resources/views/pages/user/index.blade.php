@@ -248,7 +248,10 @@
                                         <div class="product-category product">
                                             <a href="product-category.html">
                                               @if($obCategory->image)
-                                                <img  alt="All in One PC" src="{{Storage::url($obCategory->image)}}">
+                                                <pucture>
+{{--                                                  <source srcset="/assets/images/{{$obCategory->image}}" type="image/webp">--}}
+                                                  <img  alt="All in One PC" src="/assets/images/{{$obCategory->image}}">
+                                                </pucture>
                                               @else
                                                 <img  alt="All in One PC" src="user/assets/images/category/16.png">
                                               @endif

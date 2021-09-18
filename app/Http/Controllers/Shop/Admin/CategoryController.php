@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Repositories\CategoryRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
@@ -95,7 +96,9 @@ class CategoryController extends Controller
           ->withInput();
       }
       Storage::delete($obCategory->image);
-      $path = $request->file('image')->store('categories');;
+      File::delete(public_path('/assets/images/').$obCategory->image);
+      
+      $path = $request->file('image')->store('categories');
 
       $data = $request->input();
       $data['image'] = $path;

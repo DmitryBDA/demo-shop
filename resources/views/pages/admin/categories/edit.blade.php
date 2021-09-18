@@ -87,7 +87,7 @@
                     </div>
                   </div>
 
-                  <img src="{{Storage::url($obCategory->image)}}" width="200px" alt="">
+                  <img src="/assets/images/{{$obCategory->image}}" width="200px" alt="">
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">

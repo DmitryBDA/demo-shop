@@ -15,17 +15,21 @@ mix
     'public/assets/js'
   )
   // Используем полифиллы
-  .polyfill({
+/*  .polyfill({
     enabled: true,
     useBuiltIns: "usage",
     targets: false, // Используем настройки browserslist из package.json
     debug: true,
     corejs: '3.8',
-  })
+  })*/
   // Преобразовываем SASS в CSS
-  .sass(
+/*  .sass(
     'resources/assets/scss/main.scss', // Путь относительно каталога с webpack.mix.js
     'public/assets/css/' // Путь относительно каталога с webpack.mix.js
+  )*/
+  .postCss(
+    'resources/assets/css/main.css', // Путь относительно каталога с webpack.mix.js
+    'public/assets/css/' // Путь относительно каталога с webpack.mix.js)
   )
   // Переопределяем параметры mix
   .options({
@@ -86,6 +90,13 @@ mix
               ignore: ["**/icons/**"], // Игнорируем каталог с иконками
             },
           },
+          {
+            from: 'resources/assets/images/categories', // Путь относительно каталога с webpack.mix.js
+            to: 'assets/images/categories', // Путь относительно каталога public/,
+            globOptions: {
+              ignore: ["**/icons/**"], // Игнорируем каталог с иконками
+            },
+          },
         ],
       }),
       // Оптимизируем качество изображений
@@ -101,12 +112,12 @@ mix
     ],
   })
   // Создаем WEBP версии картинок
-  .ImageWebp({
+/*  .ImageWebp({
     from: 'resources/assets/images', // Путь относительно каталога с webpack.mix.js
     to: 'public/assets/images', // Путь относительно каталога с webpack.mix.js
     imageminWebpOptions: {
       quality: 70
     }
-  })
+  })*/
   // Включаем версионность
   .version();

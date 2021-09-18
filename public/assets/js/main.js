@@ -44,10 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /***/ }),
 
-/***/ "./resources/assets/scss/main.scss":
-/*!*****************************************!*\
-  !*** ./resources/assets/scss/main.scss ***!
-  \*****************************************/
+/***/ "./resources/assets/css/main.css":
+/*!***************************************!*\
+  !*** ./resources/assets/css/main.css ***!
+  \***************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -336,7 +336,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!function(root, 
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["assets/css/main"], function() { return __webpack_require__("./resources/assets/js/main.js"); })
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/main"], function() { return __webpack_require__("./resources/assets/scss/main.scss"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/main"], function() { return __webpack_require__("./resources/assets/css/main.css"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

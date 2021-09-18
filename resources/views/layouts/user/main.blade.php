@@ -15,8 +15,9 @@
     <link rel="stylesheet" type="text/css" href="user/assets/css/animate.min.css" media="all" />
     <link rel="stylesheet" type="text/css" href="user/assets/css/style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="user/assets/css/colors/blue.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="user/assets/css/custom.css" media="all" />
+{{--    <link rel="stylesheet" type="text/css" href="user/assets/css/custom.css" media="all" />--}}
 
+    <link rel="stylesheet" type="text/css" href="{{mix('/assets/css/main.css')}}" media="all" />
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,900" rel="stylesheet">
     <link rel="shortcut icon" href="user/assets/images/fav-icon.png">
 </head>
