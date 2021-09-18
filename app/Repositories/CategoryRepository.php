@@ -54,4 +54,9 @@ class CategoryRepository extends CoreRepository
 
     return $result;
   }
+
+  public function getAllCategories()
+  {
+    return $this->startCondition()->all();
+  }
 }
