@@ -73,7 +73,7 @@ class CategoryObserver
     private function setSlug(Category $category)
     {
       if(empty($category->slug)) {
-        $category->slug = Str::slug($category->name);
+        $category->slug = $category->createSlug($category->name);
       }
     }
 }

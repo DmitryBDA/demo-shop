@@ -48,7 +48,7 @@ class CategoryController extends Controller
 
       $data = $request->input();
 
-      $category = (new Category())->create($data);
+      $category = Category::create($data);
 
       if($category){
         return redirect()
