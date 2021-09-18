@@ -24,6 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [App\Http\Controllers\Shop\User\IndexController::class, 'index'])->name('index');
 
 Route::middleware(['role:admin'])->prefix('admin')->group(function () {
-    Route::get('/', [App\Http\Controllers\Shop\Admin\IndexController::class, 'index'])->name('admin-index');
-    Route::resource('/categories', App\Http\Controllers\Shop\Admin\CategoryController::class);
+  Route::get('/', [App\Http\Controllers\Shop\Admin\IndexController::class, 'index'])->name('admin-index');
+  Route::resource('/categories', App\Http\Controllers\Shop\Admin\CategoryController::class);
+  Route::resource('/products', App\Http\Controllers\Shop\Admin\ProductController::class);
 });
