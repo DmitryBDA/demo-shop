@@ -12,7 +12,6 @@ $('._input_search').on("input", (elem) => {
     type: "GET",
     data: {
       searchFields: searchFields,
-      page: page,
       sortField: sortField,
     },
     headers: {
