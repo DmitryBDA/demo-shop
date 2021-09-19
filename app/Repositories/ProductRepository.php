@@ -3,6 +3,7 @@
 
 namespace App\Repositories;
 
+use App\filters\ProductFilter;
 use App\Models\Product as Model;
 
 class ProductRepository extends CoreRepository
@@ -24,9 +25,12 @@ class ProductRepository extends CoreRepository
   {
     $columns = ['id', 'name', 'category_id', 'slug', 'preview_text', 'description', 'active'];
 
+    $filter = app(ProductFilter::class);
+
     $result = $this
       ->startCondition()
       ->select($columns)
+      ->filter($filter)
       ->with([
         'category:id,name',
       ])

@@ -266,6 +266,7 @@
 <script src="{{asset('adm/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('adm/dist/js/adminlte.js')}}"></script>
+<script src="{{mix('/assets/js/main.js')}}"></script>
 @yield('custom_js')
 @livewireScripts
 </body>

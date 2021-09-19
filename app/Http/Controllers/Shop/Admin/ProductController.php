@@ -11,11 +11,14 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * @return string
      */
-    public function index(ProductRepository $productRepository)
+    public function index(ProductRepository $productRepository, Request $request)
     {
         $paginator = $productRepository->getAllWithPaginate(10);
+        if($request->ajax()){
+          return view('pages.admin.ajax.products-list', compact('paginator'))->render();
+        }
         return view('pages.admin.products.index', compact('paginator'));
     }
 
