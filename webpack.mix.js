@@ -97,6 +97,13 @@ mix
               ignore: ["**/icons/**"], // Игнорируем каталог с иконками
             },
           },
+          {
+            from: 'resources/assets/images/products', // Путь относительно каталога с webpack.mix.js
+            to: 'assets/images/categories', // Путь относительно каталога public/,
+            globOptions: {
+              ignore: ["**/icons/**"], // Игнорируем каталог с иконками
+            },
+          },
         ],
       }),
       // Оптимизируем качество изображений

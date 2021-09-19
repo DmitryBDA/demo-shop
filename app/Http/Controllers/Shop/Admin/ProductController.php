@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Shop\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use App\Repositories\CategoryRepository;
 use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
@@ -41,15 +42,24 @@ class ProductController extends Controller
     return view('pages.admin.products.create', compact('categoryList'));
   }
 
-  /**
-   * Store a newly created resource in storage.
-   *
-   * @param Request $request
-   * @return Response
-   */
+
   public function store(Request $request)
   {
-    dd(__METHOD__, $request);
+    $path = $request->file('image')->store('products');
+
+    $data = $request->input();
+    $data['image'] = $path;
+    $obProduct = Product::create($data);
+
+    if($obProduct){
+      return redirect()
+        ->route('products.index')
+        ->with(['success' => 'Успешно сохранено']);
+    } else {
+      return back()
+        ->with(['error' => "Ошибка сохранения"])
+        ->withInput();
+    }
   }
 
   /**

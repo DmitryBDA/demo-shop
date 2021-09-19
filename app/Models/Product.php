@@ -18,6 +18,7 @@ class Product extends Model
     'category_id',
     'description',
     'preview_text',
+    'image',
     'active',
   ];
 
