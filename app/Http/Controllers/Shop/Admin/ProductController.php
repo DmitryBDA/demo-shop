@@ -116,14 +116,23 @@ class ProductController extends Controller
     }
   }
 
-  /**
-   * Remove the specified resource from storage.
-   *
-   * @param int $id
-   * @return Response
-   */
+
   public function destroy($id)
   {
-    //
+    //софт удаление
+    $result = Product::destroy($id);
+
+    //полное удаление
+    //$result = Product::find($id)->forceDelete();
+    if($result){
+      //BlogPostAfterDeleteJob::dispatch($id)->delay(30);
+
+      return redirect()
+        ->route('products.index')
+        ->with(['success' => "Запись id=$id удалена"]);
+    } else {
+      return back()
+        ->with(['error' => 'Ошибка удаление']);
+    }
   }
 }

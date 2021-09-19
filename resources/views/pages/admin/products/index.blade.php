@@ -38,7 +38,7 @@
           <div class="col-12">
             <div class="card">
               <!-- /.card-header -->
-
+              @include('pages.admin.include.flash-message')
               <div class="card-body">
                 <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
                   <div class="row">

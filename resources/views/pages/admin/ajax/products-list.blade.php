@@ -36,6 +36,10 @@
           tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
           aria-label="CSS grade: activate to sort column ascending">Активный
         </th>
+        <th
+          tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+          aria-label="CSS grade: activate to sort column ascending">Действия
+        </th>
       </tr>
       </thead>
       <tbody>
@@ -47,6 +51,13 @@
           <td style="">{{$obProduct->slug}}</td>
           <td class="">{{$obProduct->category->name}}</td>
           <td>{{$obProduct->active}}</td>
+          <td>
+            <form method="POST" action="{{ route('products.destroy', $obProduct->id) }}">
+              @method('DELETE')
+              @csrf
+            <button data-product-id="{{$obProduct->id}}" type="submit" class="btn btn-block btn-danger _delete_product">Удалить</button>
+            </form>
+          </td>
         </tr>
       @endforeach
       </tbody>
