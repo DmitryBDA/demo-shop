@@ -38,6 +38,10 @@
           <th class="sorting @if($fieldTek == 'active')sorting_{{$ascOrDesc}}@endif" wire:click="sortBy('active')" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
               aria-label="CSS grade: activate to sort column ascending">Активный
           </th>
+          <th
+            tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+            aria-label="CSS grade: activate to sort column ascending">Действия
+          </th>
         </tr>
         </thead>
         <tbody>
@@ -50,6 +54,13 @@
             <td style="">{{$category->slug}}</td>
             <td class="">{{$category->parentTitle}}</td>
             <td>{{$category->active}}</td>
+            <td>
+              <form method="POST" action="{{ route('categories.destroy', $category->id) }}">
+                @method('DELETE')
+                @csrf
+                <button data-category-id="{{$category->id}}" type="submit" class="btn btn-block btn-danger _delete_product">Удалить</button>
+              </form>
+            </td>
           </tr>
         @endforeach
 

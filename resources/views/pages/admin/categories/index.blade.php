@@ -38,6 +38,7 @@
           <div class="col-12">
             <div class="card">
               <!-- /.card-header -->
+              @include('pages.admin.include.flash-message')
               <div class="card-body">
                 <livewire:search />
               </div>
