@@ -11,24 +11,49 @@
 import svg4everybody from 'svg4everybody';*/
 $('._input_search').on("input", function (elem) {
   var searchFields = $(elem.target).val();
+  var url = new URL(window.location);
+  var page = url.searchParams["delete"]('page');
+  var sortField = url.searchParams.get('sortField');
   $.ajax({
     url: "/admin/products",
     type: "GET",
     data: {
-      searchFields: searchFields
+      searchFields: searchFields,
+      page: page,
+      sortField: sortField
     },
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     },
     success: function success(data) {
-      console.log(data);
       $('._ajax_product_list').html(data);
-      var url = new URL(window.location);
       url.searchParams.set('searchFields', searchFields);
       history.pushState(null, null, url);
     }
   });
-  console.log();
+});
+$(document).on('click', '.sorting', function (elem) {
+  var sortField = $(elem.target).attr('data-sorting').trim();
+  var url = new URL(window.location);
+  var searchFields = url.searchParams.get('searchFields');
+  var page = url.searchParams.get('page');
+  $.ajax({
+    url: "/admin/products",
+    type: "GET",
+    data: {
+      sortField: sortField,
+      searchFields: searchFields,
+      page: page
+    },
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+    success: function success(data) {
+      $('._ajax_product_list').html(data);
+      url.searchParams.set('sortField', sortField);
+      history.pushState(null, null, url);
+    }
+  });
 });
 
 /***/ }),
