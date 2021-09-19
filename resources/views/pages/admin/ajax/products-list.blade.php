@@ -43,7 +43,7 @@
       @foreach($paginator as $obProduct)
         <tr class="odd">
           <td class="sorting_1 dtr-control" tabindex="0" style="">{{$obProduct->id}}</td>
-          <td style=""><a href="{{route('categories.edit', $obProduct->id)}}">{{$obProduct->name}}</a></td>
+          <td style=""><a href="{{route('products.edit', $obProduct->id)}}">{{$obProduct->name}}</a></td>
           <td style="">{{$obProduct->slug}}</td>
           <td class="">{{$obProduct->category->name}}</td>
           <td>{{$obProduct->active}}</td>
