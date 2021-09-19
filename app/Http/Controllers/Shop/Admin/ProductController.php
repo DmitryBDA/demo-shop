@@ -8,6 +8,8 @@ use App\Repositories\CategoryRepository;
 use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -73,27 +75,45 @@ class ProductController extends Controller
     //
   }
 
-  /**
-   * Show the form for editing the specified resource.
-   *
-   * @param int $id
-   * @return Response
-   */
+
   public function edit($id)
   {
+    $obProduct = $this->productRepository->getEdit($id);
 
+    $categoryList = $this->categoryRepository->getForComboBox();
+
+    return view('pages.admin.products.edit', compact('obProduct', 'categoryList'));
   }
 
-  /**
-   * Update the specified resource in storage.
-   *
-   * @param Request $request
-   * @param int $id
-   * @return Response
-   */
+
   public function update(Request $request, $id)
   {
-    //
+    $obProduct = $this->productRepository->getEdit($id);
+    if(empty($obProduct)){
+      return back()
+        ->with(['error' => "Запись id={$id} не найдена"])
+        ->withInput();
+    }
+    $data = $request->input();
+
+    if($request->file('image')){
+      Storage::delete($obProduct->image);
+      File::delete(public_path('/assets/images/').$obProduct->image);
+      $path = $request->file('image')->store('categories');
+      $data['image'] = $path;
+    }
+
+    $result = $obProduct->update($data);
+
+    if($result){
+      return redirect()
+        ->route('products.edit', $obProduct->id)
+        ->with(['success' => 'Успешно сохранено']);
+    } else {
+      return back()
+        ->with(['error' => "Ошибка сохранения"])
+        ->withInput();
+    }
   }
 
   /**

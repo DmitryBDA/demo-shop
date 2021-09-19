@@ -95,13 +95,14 @@ class CategoryController extends Controller
           ->with(['error' => "Запись id={$id} не найдена"])
           ->withInput();
       }
-      Storage::delete($obCategory->image);
-      File::delete(public_path('/assets/images/').$obCategory->image);
-      
-      $path = $request->file('image')->store('categories');
-
       $data = $request->input();
-      $data['image'] = $path;
+
+      if($request->file('image')){
+        Storage::delete($obCategory->image);
+        File::delete(public_path('/assets/images/').$obCategory->image);
+        $path = $request->file('image')->store('categories');
+        $data['image'] = $path;
+      }
 
       $result = $obCategory->update($data);
 
