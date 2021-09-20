@@ -20,6 +20,7 @@ class Category extends Model
       'preview_text',
       'image',
       'active',
+      'favorites',
     ];
 
   /**

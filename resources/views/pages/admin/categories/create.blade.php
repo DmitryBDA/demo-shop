@@ -52,6 +52,12 @@
                     </div>
                   </div>
                   <div class="form-group">
+                    <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                      <input type="checkbox" class="custom-control-input" name="favorites" value="1" id="favorites">
+                      <label class="custom-control-label" for="favorites">Избранное</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label for="name">Название</label>
                     <input type="name" class="form-control" id="name" name="name" placeholder="Введите название">
                   </div>

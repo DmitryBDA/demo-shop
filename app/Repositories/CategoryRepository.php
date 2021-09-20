@@ -60,6 +60,13 @@ class CategoryRepository extends CoreRepository
     return $this->startCondition()->all();
   }
 
+  public function getFavoritesCategories()
+  {
+    return $this->startCondition()
+      ->where('favorites', 1)
+      ->get();
+  }
+
   public function getTree()
   {
     $obCategoryList = $this->startCondition()
