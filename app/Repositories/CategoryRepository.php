@@ -59,4 +59,13 @@ class CategoryRepository extends CoreRepository
   {
     return $this->startCondition()->all();
   }
+
+  public function getTree()
+  {
+    $obCategoryList = $this->startCondition()
+      ->where('parent_id', 0)
+      ->get();
+
+    return $obCategoryList;
+  }
 }

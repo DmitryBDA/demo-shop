@@ -7,7 +7,9 @@ use App\Models\Product;
 use App\Observers\CategoryObserver;
 use App\Observers\ProductObserver;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use App\Repositories\CategoryRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,10 +28,14 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(CategoryRepository $categoryRepository)
     {
       Category::observe(CategoryObserver::class);
       Product::observe(ProductObserver::class);
+
+      //Переменная $categoryList будет доступна во всех шаблонах
+      $obTreeCategoryList = $categoryRepository->getTree();
+      View::share(['obTreeCategoryList' => $obTreeCategoryList]);
 
       Paginator::useBootstrap();
     }
