@@ -35,7 +35,12 @@ class AppServiceProvider extends ServiceProvider
 
       //Переменная $categoryList будет доступна во всех шаблонах
       $obTreeCategoryList = $categoryRepository->getTree();
-      View::share(['obTreeCategoryList' => $obTreeCategoryList]);
+      $obAllCategoryList = $categoryRepository->getAllCategories();
+      View::share([
+        'obTreeCategoryList' => $obTreeCategoryList,
+        'obAllCategoryList' => $obAllCategoryList,
+
+      ]);
 
       Paginator::useBootstrap();
     }

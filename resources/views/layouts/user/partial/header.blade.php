@@ -63,7 +63,7 @@
                         <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
                           <div class="kc-col-container">
                             <div class="kc_single_image">
-                              <img src="user/assets/images/megamenu.jpg" class="" alt="" />
+                              <img src="/assets/images/{{$obCategory->image}}" class="" alt="" />
                             </div>
                             <!-- .kc_single_image -->
                           </div>
@@ -106,154 +106,6 @@
               @endif
             </li>
           @endforeach
-            {{--
-
-          <li class="highlight menu-item animate-dropdown">
-            <a title="Top 100 Offers" href="home-v3.html">Top 100 Offers</a>
-          </li>
-          <li class="highlight menu-item animate-dropdown">
-            <a title="New Arrivals" href="home-v4.html">New Arrivals</a>
-          </li>
-
-          <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown dropdown-submenu">
-            <a title="Computers &amp; Laptops" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="#">Computers &#038; Laptops <span class="caret"></span></a>
-            <ul role="menu" class=" dropdown-menu">
-              <li class="menu-item menu-item-object-static_block animate-dropdown">
-                <div class="yamm-content">
-                  <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
-                    <div class="kc-col-container">
-                      <div class="kc_single_image">
-                        <img src="user/assets/images/megamenu.jpg" class="" alt="" />
-                      </div>
-                      <!-- .kc_single_image -->
-                    </div>
-                    <!-- .kc-col-container -->
-                  </div>
-                  <!-- .bg-yamm-content -->
-                  <div class="row yamm-content-row">
-                    <div class="col-md-6 col-sm-12">
-                      <div class="kc-col-container">
-                        <div class="kc_text_block">
-                          <ul>
-                            <li class="nav-title">Computers &amp; Accessories</li>
-                            <li><a href="shop.html">All Computers &amp; Accessories</a></li>
-                            <li><a href="shop.html">Laptops, Desktops &amp; Monitors</a></li>
-                            <li><a href="shop.html">Pen Drives, Hard Drives &amp; Memory Cards</a></li>
-                            <li><a href="shop.html">Printers &amp; Ink</a></li>
-                            <li><a href="shop.html">Networking &amp; Internet Devices</a></li>
-                            <li><a href="shop.html">Computer Accessories</a></li>
-                            <li><a href="shop.html">Software</a></li>
-                            <li class="nav-divider"></li>
-                            <li>
-                              <a href="#">
-                                <span class="nav-text">All Electronics</span>
-                                <span class="nav-subtext">Discover more products</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <!-- .kc_text_block -->
-                      </div>
-                      <!-- .kc-col-container -->
-                    </div>
-                    <!-- .kc_column -->
-                    <div class="col-md-6 col-sm-12">
-                      <div class="kc-col-container">
-                        <div class="kc_text_block">
-                          <ul>
-                            <li class="nav-title">Office &amp; Stationery</li>
-                            <li><a href="shop.html">All Office &amp; Stationery</a></li>
-                            <li><a href="shop.html">Pens &amp; Writing</a></li>
-                          </ul>
-                        </div>
-                        <!-- .kc_text_block -->
-                      </div>
-                      <!-- .kc-col-container -->
-                    </div>
-                    <!-- .kc_column -->
-                  </div>
-                  <!-- .kc_row -->
-                </div>
-                <!-- .yamm-content -->
-              </li>
-            </ul>
-          </li>
-
-          <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown dropdown-submenu">
-            <a title="Cameras &amp; Photo" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="#">Cameras &#038; Photo <span class="caret"></span></a>
-            <ul role="menu" class=" dropdown-menu">
-              <li class="menu-item menu-item-object-static_block animate-dropdown">
-                <div class="yamm-content">
-                  <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
-                    <div class="kc-col-container">
-                      <div class="kc_single_image">
-                        <img src="user/assets/images/megamenu-1.jpg" class="" alt="" />
-                      </div>
-                      <!-- .kc_single_image -->
-                    </div>
-                    <!-- .kc-col-container -->
-                  </div>
-                  <!-- .bg-yamm-content -->
-                  <div class="row yamm-content-row">
-                    <div class="col-md-6 col-sm-12">
-                      <div class="kc-col-container">
-                        <div class="kc_text_block">
-                          <ul>
-                            <li class="nav-title">Cameras & Photography</li>
-                            <li><a href="shop.html">All Cameras & Photography</a></li>
-                            <li><a href="shop.html">Point & Shoot Cameras</a></li>
-                            <li><a href="shop.html">Lenses</a></li>
-                            <li><a href="shop.html">Camera Accessories</a></li>
-                            <li><a href="shop.html">Security & Surveillance</a></li>
-                            <li><a href="shop.html">Binoculars & Telescopes</a></li>
-                            <li><a href="shop.html">Camcorders</a></li>
-                            <li class="nav-divider"></li>
-                            <li>
-                              <a href="#">
-                                <span class="nav-text">All Electronics</span>
-                                <span class="nav-subtext">Discover more products</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <!-- .kc_text_block -->
-                      </div>
-                      <!-- .kc-col-container -->
-                    </div>
-                    <!-- .kc_column -->
-                    <div class="col-md-6 col-sm-12">
-                      <div class="kc-col-container">
-                        <div class="kc_text_block">
-                          <ul>
-                            <li class="nav-title">Audio & Video</li>
-                            <li><a href="shop.html">All Audio & Video</a></li>
-                            <li><a href="shop.html">Headphones & Speakers</a></li>
-                            <li><a href="shop.html">Home Entertainment Systems</a></li>
-                            <li><a href="shop.html">MP3 & Media Players</a></li>
-                          </ul>
-                        </div>
-                        <!-- .kc_text_block -->
-                      </div>
-                      <!-- .kc-col-container -->
-                    </div>
-                    <!-- .kc_column -->
-                  </div>
-                  <!-- .kc_row -->
-                </div>
-                <!-- .yamm-content -->
-              </li>
-            </ul>
-          </li>
-
-
-          <li class="menu-item menu-item-type-custom animate-dropdown">
-            <a title="Gadgets" href="landing-page-v1.html">Gadgets</a>
-          </li>
-          <li class="menu-item menu-item-type-custom animate-dropdown">
-            <a title="Virtual Reality" href="landing-page-v2.html">Virtual Reality</a>
-          </li>
-
-        --}}
         </ul>
       </div>
       <!-- .departments-menu -->
@@ -263,28 +115,9 @@
           <input type="text" id="search" class="form-control search-field product-search-field" dir="ltr" value="" name="s" placeholder="Search for products" />
           <div class="input-group-addon search-categories popover-header">
             <select name='product_cat' id='product_cat' class='postform resizeselect'>
-              <option value='0' selected='selected'>All Categories</option>
-              <option class="level-0" value="television">Televisions</option>
-              <option class="level-0" value="home-theater-audio">Home Theater &amp; Audio</option>
-              <option class="level-0" value="headphones">Headphones</option>
-              <option class="level-0" value="digital-cameras">Digital Cameras</option>
-              <option class="level-0" value="cells-tablets">Cells &amp; Tablets</option>
-              <option class="level-0" value="smartwatches">Smartwatches</option>
-              <option class="level-0" value="games-consoles">Games &amp; Consoles</option>
-              <option class="level-0" value="printer">Printer</option>
-              <option class="level-0" value="tv-video">TV &amp; Video</option>
-              <option class="level-0" value="home-entertainment">Home Entertainment</option>
-              <option class="level-0" value="tvs">TVs</option>
-              <option class="level-0" value="speakers">Speakers</option>
-              <option class="level-0" value="computers-laptops">Computers &amp; Laptops</option>
-              <option class="level-0" value="laptops">Laptops</option>
-              <option class="level-0" value="ultrabooks">Ultrabooks</option>
-              <option class="level-0" value="notebooks">Notebooks</option>
-              <option class="level-0" value="desktop-pcs">Desktop PCs</option>
-              <option class="level-0" value="mac-computers">Mac Computers</option>
-              <option class="level-0" value="all-in-one-pc">All in One PC</option>
-              <option class="level-0" value="audio-music">Audio &amp; Music</option>
-              <option class="level-0" value="pc-components">PC Components</option>
+              @foreach($obAllCategoryList as $obCategory)
+                <option value='{{$obCategory->id}}'  @if ($loop->first) selected='selected' @endif >{{$obCategory->name}}</option>
+              @endforeach
             </select>
           </div>
           <!-- .input-group-addon -->
