@@ -44,4 +44,16 @@ class ProductRepository extends CoreRepository
     return $this->startCondition()->find($id);
   }
 
+  public function getNewProducts()
+  {
+    $columns = ['id', 'name', 'price', 'slug', 'old_price', 'image'];
+
+    $obProductList = $this->startCondition()
+      ->select($columns)
+      ->where('new', 1)
+      ->get();
+
+    return $obProductList;
+  }
+
 }
