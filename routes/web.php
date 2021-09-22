@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Shop\User\CatalogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', [App\Http\Controllers\Shop\User\IndexController::class, 'index'])->name('index');
+Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
 
 Route::middleware(['role:admin'])->prefix('admin')->group(function () {
   Route::get('/', [App\Http\Controllers\Shop\Admin\IndexController::class, 'index'])->name('admin-index');
