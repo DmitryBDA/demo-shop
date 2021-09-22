@@ -27,8 +27,18 @@
 @endif
 
 @if ($errors->any())
-  <div class="alert alert-danger">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-    Check the following errors :(
+  <div class="row justify-content-center">
+    <div class="col-md-11">
+      <div class="alert alert-danger" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">x</span>
+        </button>
+        <ul>
+          @foreach($errors->all() as $errorText)
+            <li>{{ $errorText }}</li>
+          @endforeach
+        </ul>
+      </div>
+    </div>
   </div>
 @endif

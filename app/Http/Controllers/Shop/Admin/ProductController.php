@@ -33,11 +33,7 @@ class ProductController extends Controller
     return view('pages.admin.products.index', compact('paginator'));
   }
 
-  /**
-   * Show the form for creating a new resource.
-   *
-   * @return Response
-   */
+
   public function create()
   {
     $categoryList = $this->categoryRepository->getForComboBox();
@@ -47,10 +43,13 @@ class ProductController extends Controller
 
   public function store(Request $request)
   {
-    $path = $request->file('image')->store('products');
 
     $data = $request->input();
-    $data['image'] = $path;
+    if($request->file('image')){
+      $path = $request->file('image')->store('products');
+      $data['image'] = $path;
+    }
+
     $obProduct = Product::create($data);
 
     if($obProduct){
@@ -99,7 +98,7 @@ class ProductController extends Controller
     if($request->file('image')){
       Storage::delete($obProduct->image);
       File::delete(public_path('/assets/images/').$obProduct->image);
-      $path = $request->file('image')->store('categories');
+      $path = $request->file('image')->store('products');
       $data['image'] = $path;
     }
 

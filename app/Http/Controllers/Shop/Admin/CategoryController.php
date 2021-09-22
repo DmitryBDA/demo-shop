@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Shop\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateCategoryRequest;
 use App\Models\Category;
 use App\Repositories\CategoryRepository;
 use Illuminate\Http\Request;
@@ -39,18 +40,16 @@ class CategoryController extends Controller
         return view('pages.admin.categories.create', compact('categoryList'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function store(Request $request)
+
+    public function store(CreateCategoryRequest $request)
     {
-      $path = $request->file('image')->store('categories');
 
       $data = $request->input();
-      $data['image'] = $path;
+
+      if($request->file('image')){
+        $path = $request->file('image')->store('categories');
+        $data['image'] = $path;
+      }
       $category = Category::create($data);
 
       if($category){

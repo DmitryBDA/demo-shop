@@ -35,6 +35,7 @@
         <div class="row">
           <!-- left column -->
           <div class="col-md-6">
+          @include('pages.admin.include.flash-message')
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
