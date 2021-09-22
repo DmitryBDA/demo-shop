@@ -71,6 +71,7 @@ class CategoryRepository extends CoreRepository
   {
     $obCategoryList = $this->startCondition()
       ->where('parent_id', 0)
+      ->with('allChildren')
       ->get();
 
     return $obCategoryList;

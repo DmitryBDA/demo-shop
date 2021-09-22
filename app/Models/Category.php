@@ -40,6 +40,11 @@ class Category extends Model
 
   }
 
+  public function allChildren()
+  {
+    return $this->hasMany(Category::class, 'parent_id')->with('children');
+  }
+
   /**
    *Пример аксесуара (Accessor)
    *

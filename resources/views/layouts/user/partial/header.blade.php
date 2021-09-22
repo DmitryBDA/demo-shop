@@ -52,10 +52,10 @@
 
           @foreach($obTreeCategoryList as $obCategory)
 
-            <li class=" menu-item @if($obCategory->children->isNotEmpty()) menu-item-has-children animate-dropdown dropdown-submenu yamm-tfw @else highlight animate-dropdown  @endif">
-              <a title="Value of the Day" @if($obCategory->children->isNotEmpty()) data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" @endif href="home-v2.html">{{$obCategory->name}} @if($obCategory->children->isNotEmpty()) <span class="caret"></span> @endif</a>
+            <li class=" menu-item @if($obCategory->allChildren->isNotEmpty()) menu-item-has-children animate-dropdown dropdown-submenu yamm-tfw @else highlight animate-dropdown  @endif">
+              <a title="Value of the Day" @if($obCategory->allChildren->isNotEmpty()) data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" @endif href="home-v2.html">{{$obCategory->name}} @if($obCategory->allChildren->isNotEmpty()) <span class="caret"></span> @endif</a>
 
-              @if($obCategory->children->isNotEmpty())
+              @if($obCategory->allChildren->isNotEmpty())
                 <ul role="menu" class=" dropdown-menu">
 
                     <li class="menu-item menu-item-object-static_block animate-dropdown">
@@ -71,7 +71,7 @@
                         </div>
                         <!-- .bg-yamm-content -->
                         <div class="row yamm-content-row">
-                          @foreach($obCategory->children as $obCategoryChildren)
+                          @foreach($obCategory->allChildren as $obCategoryChildren)
                           <div class="col-md-6 col-sm-12">
                             <div class="kc-col-container">
                               <div class="kc_text_block">

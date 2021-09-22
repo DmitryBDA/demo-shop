@@ -35,6 +35,7 @@ class AppServiceProvider extends ServiceProvider
 
       //Переменная $categoryList будет доступна во всех шаблонах
       $obTreeCategoryList = $categoryRepository->getTree();
+//      dd($obTreeCategoryList);
       $obAllCategoryList = $categoryRepository->getAllCategories();
       $obFavoritesCategoryList = $categoryRepository->getFavoritesCategories();
 
