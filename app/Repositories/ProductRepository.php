@@ -46,11 +46,14 @@ class ProductRepository extends CoreRepository
 
   public function getNewProducts()
   {
-    $columns = ['id', 'name', 'price', 'slug', 'old_price', 'image'];
+    $columns = ['id', 'name', 'price', 'slug', 'old_price', 'image', 'category_id'];
 
     $obProductList = $this->startCondition()
       ->select($columns)
       ->where('new', 1)
+      ->with([
+        'category:id,slug'
+      ])
       ->get();
 
     return $obProductList;

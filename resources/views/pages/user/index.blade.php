@@ -246,7 +246,7 @@
                                     <div class="products">
                                       @foreach($obCategoryList as $obCategory)
                                         <div class="product-category product">
-                                            <a href="product-category.html">
+                                            <a href="{{route('shop_show_category', $obCategory->slug )}}">
                                               @if($obCategory->image)
                                                 <pucture>
 {{--                                                  <source srcset="/assets/images/{{$obCategory->image}}" type="image/webp">--}}
@@ -286,11 +286,12 @@
                                       <div class="woocommerce columns-7">
                                           <div class="products">
                                             @foreach($obNewProductList as $obProduct)
+
                                               <div class="product">
                                                   <div class="yith-wcwl-add-to-wishlist">
                                                       <a href="wishlist.html" rel="nofollow" class="add_to_wishlist"> Add to Wishlist</a>
                                                   </div>
-                                                  <a href="single-product-fullwidth.html" class="woocommerce-LoopProduct-link">
+                                                  <a href="{{route('shop_show_product',[ $obProduct->category->slug, $obProduct->slug] )  }}" class="woocommerce-LoopProduct-link">
                                                     @if($obProduct->image)
                                                       <img src="/assets/images/{{$obProduct->image}}" width="224" height="197" class="wp-post-image" alt="">
                                                     @else
