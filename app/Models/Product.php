@@ -21,6 +21,8 @@ class Product extends Model
     'preview_text',
     'image',
     'active',
+    'price',
+    'old_price',
   ];
 
   /**

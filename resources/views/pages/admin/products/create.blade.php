@@ -68,6 +68,14 @@
                     <input type="slug" class="form-control" id="slug" name="slug" placeholder="Введите slug">
                   </div>
                   <div class="form-group">
+                    <label for="price">Цена</label>
+                    <input type="number" class="form-control" id="price" name="price" placeholder="Введите цену">
+                  </div>
+                  <div class="form-group">
+                    <label for="old_price">Старая цена</label>
+                    <input type="number" class="form-control" id="old_price" name="old_price" placeholder="Введите старую цену">
+                  </div>
+                  <div class="form-group">
                     <label>Краткое описание</label>
                     <textarea class="form-control" name="preview_text" rows="2" placeholder="Enter ..."></textarea>
                   </div><div class="form-group">
