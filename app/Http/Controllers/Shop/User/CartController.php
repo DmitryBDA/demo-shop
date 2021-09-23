@@ -9,10 +9,9 @@ class CartController extends Controller
 {
   public function cartList()
   {
-    $cartItems = \Cart::getContent();
-    dd($cartItems);
+    $obCartList = \Cart::getContent();
     // dd($cartItems);
-    return view('cart', compact('cartItems'));
+    return view('pages.user.cart', compact('obCartList'));
   }
 
 
