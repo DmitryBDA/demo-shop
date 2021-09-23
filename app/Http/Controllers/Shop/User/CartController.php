@@ -53,7 +53,10 @@ class CartController extends Controller
     \Cart::remove($request->id);
     session()->flash('success', 'Item Cart Remove Successfully !');
 
-    return redirect()->route('cart.list');
+    $obCartList = \Cart::getContent();
+    $data['info-cart'] = view('layouts.user.partial.header.ajax-elem.info-cart')->render();
+    $data['product-list'] = view('pages.user.cart.cart-wrapper', compact('obCartList'))->render();
+    return $data;
   }
 
   public function clearAllCart()

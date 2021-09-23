@@ -79,6 +79,24 @@ $(document).on('click', '.add_to_cart_button', function (e) {
     }
   });
 });
+$(document).on('click', '._remove_from_cart', function (e) {
+  e.preventDefault();
+  var product_id = $(this).attr('data-product-id');
+  $.ajax({
+    url: "/remove",
+    type: "POST",
+    data: {
+      id: product_id
+    },
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+    success: function success(data) {
+      $('._info_cart_wrapper').html(data['info-cart']);
+      $('._cart-wrapper').html(data['product-list']);
+    }
+  });
+});
 
 /***/ }),
 
