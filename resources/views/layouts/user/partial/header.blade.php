@@ -159,11 +159,8 @@
       <!-- .header-wishlist -->
       <ul id="site-header-cart" class="site-header-cart menu">
         <li class="animate-dropdown dropdown ">
-          <a class="cart-contents" href="cart.html" data-toggle="dropdown" title="View your shopping cart">
-            <i class="tm tm-shopping-bag"></i>
-            <span class="count">2</span>
-            <span class="amount">
-                                        <span class="price-label">Your Cart</span>&#036;136.99</span>
+          <a class="cart-contents _info_cart_wrapper" href="cart.html" data-toggle="dropdown" title="View your shopping cart">
+            @include('layouts.user.partial.header.ajax-elem.info-cart')
           </a>
           <ul class="dropdown-menu dropdown-menu-mini-cart">
             <li>

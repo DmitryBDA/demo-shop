@@ -18,7 +18,7 @@ class CartController extends Controller
 
   public function addToCart(Request $request)
   {
-    \Cart::add([
+    $result = \Cart::add([
       'id' => $request->id,
       'name' => $request->name,
       'price' => $request->price,
@@ -27,9 +27,9 @@ class CartController extends Controller
         'image' => $request->image,
       )
     ]);
-    session()->flash('success', 'Product is Added to Cart Successfully !');
+//    session()->flash('success', 'Product is Added to Cart Successfully !');
 
-    return redirect()->back();
+    return view('layouts.user.partial.header.ajax-elem.info-cart')->render();
   }
 
   public function updateCart(Request $request)

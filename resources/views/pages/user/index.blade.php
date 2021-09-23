@@ -313,7 +313,12 @@
                                                       <h2 class="woocommerce-loop-product__title">{{$obProduct->name}}</h2>
                                                   </a>
                                                   <div class="hover-area">
-                                                      <a class="button add_to_cart_button" href="cart.html" rel="nofollow">Add to cart</a>
+                                                      <a data-product-id="{{$obProduct->id}}"
+                                                         data-product-name="{{$obProduct->name}}"
+                                                         data-product-price="{{$obProduct->price}}"
+                                                         data-product-image="{{$obProduct->image}}"
+                                                         data-product-quantity="1"
+                                                         class="button add_to_cart_button" href="cart.html" rel="nofollow">Add to cart</a>
                                                       <a class="add-to-compare-link" href="compare.html">Add to compare</a>
                                                   </div>
                                               </div>

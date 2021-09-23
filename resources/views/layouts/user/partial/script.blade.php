@@ -12,3 +12,4 @@
 <script type="text/javascript" src="user/assets/js/pace.min.js"></script>
 <script type="text/javascript" src="user/assets/js/slick.min.js"></script>
 <script type="text/javascript" src="user/assets/js/scripts.js"></script>
+<script src="{{mix('/assets/js/main.js')}}"></script>
