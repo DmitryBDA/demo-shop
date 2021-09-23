@@ -20,23 +20,35 @@
                 }
               </style>
             </defs>
-            <polygon class="cls-1" points="171.63 0.91 171.63 11 170.63 11 170.63 0.91 170.63 0.84 170.63 0.06 176 0.06 176 0.91 171.63 0.91" />
-            <rect class="cls-2" x="166.19" y="0.06" width="3.47" height="0.84" />
-            <rect class="cls-2" x="159.65" y="4.81" width="3.51" height="0.84" />
-            <polygon class="cls-1" points="158.29 11 157.4 11 157.4 0.06 158.26 0.06 158.36 0.06 164.89 0.06 164.89 0.87 158.36 0.87 158.36 10.19 164.99 10.19 164.99 11 158.36 11 158.29 11" />
-            <polygon class="cls-1" points="149.54 6.61 150.25 5.95 155.72 10.98 154.34 10.98 149.54 6.61" />
-            <polygon class="cls-1" points="147.62 10.98 146.65 10.98 146.65 0.05 147.62 0.05 147.62 5.77 153.6 0.33 154.91 0.33 147.62 7.05 147.62 10.98" />
-            <path class="cls-1" d="M156.39,24h-1.25s-0.49-.39-0.71-0.59l-1.35-1.25c-0.25-.23-0.68-0.66-0.68-0.66s0-.46,0-0.72a3.56,3.56,0,0,0,3.54-2.87,3.36,3.36,0,0,0-3.22-4H148.8V24h-1V13.06h5c2.34,0.28,4,1.72,4.12,4a4.26,4.26,0,0,1-3.38,4.34C154.48,22.24,156.39,24,156.39,24Z" transform="translate(-12 -13)" />
-            <polygon class="cls-1" points="132.04 2.09 127.09 7.88 130.78 7.88 130.78 8.69 126.4 8.69 124.42 11 123.29 11 132.65 0 133.04 0 133.04 11 132.04 11 132.04 2.09" />
-            <polygon class="cls-1" points="120.97 2.04 116.98 6.15 116.98 6.19 116.97 6.17 116.95 6.19 116.95 6.15 112.97 2.04 112.97 11 112 11 112 0 112.32 0 116.97 4.8 121.62 0 121.94 0 121.94 11 120.97 11 120.97 2.04" />
-            <ellipse class="cls-3" cx="116.3" cy="22.81" rx="5.15" ry="5.18" />
-            <rect class="cls-2" x="99.13" y="0.44" width="5.87" height="27.12" />
-            <polygon class="cls-1" points="85.94 27.56 79.92 27.56 79.92 0.44 85.94 0.44 85.94 16.86 96.35 16.86 96.35 21.84 85.94 21.84 85.94 27.56" />
-            <path class="cls-1" d="M77.74,36.07a9,9,0,0,0,6.41-2.68L88,37c-2.6,2.74-6.71,4-10.89,4A13.94,13.94,0,0,1,62.89,27.15,14.19,14.19,0,0,1,77.11,13c4.38,0,8.28,1.17,10.89,4,0,0-3.89,3.82-3.91,3.8A9,9,0,1,0,77.74,36.07Z" transform="translate(-12 -13)" />
-            <rect class="cls-2" x="37.4" y="11.14" width="7.63" height="4.98" />
-            <polygon class="cls-1" points="32.85 27.56 28.6 27.56 28.6 5.42 28.6 3.96 28.6 0.44 47.95 0.44 47.95 5.42 34.46 5.42 34.46 22.72 48.25 22.72 48.25 27.56 34.46 27.56 32.85 27.56" />
-            <polygon class="cls-1" points="15.4 27.56 9.53 27.56 9.53 5.57 9.53 0.59 9.53 0.44 24.93 0.44 24.93 5.57 15.4 5.57 15.4 27.56" />
-            <rect class="cls-2" y="0.44" width="7.19" height="5.13" />
+            <polygon class="cls-1"
+                     points="171.63 0.91 171.63 11 170.63 11 170.63 0.91 170.63 0.84 170.63 0.06 176 0.06 176 0.91 171.63 0.91"/>
+            <rect class="cls-2" x="166.19" y="0.06" width="3.47" height="0.84"/>
+            <rect class="cls-2" x="159.65" y="4.81" width="3.51" height="0.84"/>
+            <polygon class="cls-1"
+                     points="158.29 11 157.4 11 157.4 0.06 158.26 0.06 158.36 0.06 164.89 0.06 164.89 0.87 158.36 0.87 158.36 10.19 164.99 10.19 164.99 11 158.36 11 158.29 11"/>
+            <polygon class="cls-1" points="149.54 6.61 150.25 5.95 155.72 10.98 154.34 10.98 149.54 6.61"/>
+            <polygon class="cls-1"
+                     points="147.62 10.98 146.65 10.98 146.65 0.05 147.62 0.05 147.62 5.77 153.6 0.33 154.91 0.33 147.62 7.05 147.62 10.98"/>
+            <path class="cls-1"
+                  d="M156.39,24h-1.25s-0.49-.39-0.71-0.59l-1.35-1.25c-0.25-.23-0.68-0.66-0.68-0.66s0-.46,0-0.72a3.56,3.56,0,0,0,3.54-2.87,3.36,3.36,0,0,0-3.22-4H148.8V24h-1V13.06h5c2.34,0.28,4,1.72,4.12,4a4.26,4.26,0,0,1-3.38,4.34C154.48,22.24,156.39,24,156.39,24Z"
+                  transform="translate(-12 -13)"/>
+            <polygon class="cls-1"
+                     points="132.04 2.09 127.09 7.88 130.78 7.88 130.78 8.69 126.4 8.69 124.42 11 123.29 11 132.65 0 133.04 0 133.04 11 132.04 11 132.04 2.09"/>
+            <polygon class="cls-1"
+                     points="120.97 2.04 116.98 6.15 116.98 6.19 116.97 6.17 116.95 6.19 116.95 6.15 112.97 2.04 112.97 11 112 11 112 0 112.32 0 116.97 4.8 121.62 0 121.94 0 121.94 11 120.97 11 120.97 2.04"/>
+            <ellipse class="cls-3" cx="116.3" cy="22.81" rx="5.15" ry="5.18"/>
+            <rect class="cls-2" x="99.13" y="0.44" width="5.87" height="27.12"/>
+            <polygon class="cls-1"
+                     points="85.94 27.56 79.92 27.56 79.92 0.44 85.94 0.44 85.94 16.86 96.35 16.86 96.35 21.84 85.94 21.84 85.94 27.56"/>
+            <path class="cls-1"
+                  d="M77.74,36.07a9,9,0,0,0,6.41-2.68L88,37c-2.6,2.74-6.71,4-10.89,4A13.94,13.94,0,0,1,62.89,27.15,14.19,14.19,0,0,1,77.11,13c4.38,0,8.28,1.17,10.89,4,0,0-3.89,3.82-3.91,3.8A9,9,0,1,0,77.74,36.07Z"
+                  transform="translate(-12 -13)"/>
+            <rect class="cls-2" x="37.4" y="11.14" width="7.63" height="4.98"/>
+            <polygon class="cls-1"
+                     points="32.85 27.56 28.6 27.56 28.6 5.42 28.6 3.96 28.6 0.44 47.95 0.44 47.95 5.42 34.46 5.42 34.46 22.72 48.25 22.72 48.25 27.56 34.46 27.56 32.85 27.56"/>
+            <polygon class="cls-1"
+                     points="15.4 27.56 9.53 27.56 9.53 5.57 9.53 0.59 9.53 0.44 24.93 0.44 24.93 5.57 15.4 5.57 15.4 27.56"/>
+            <rect class="cls-2" y="0.44" width="7.19" height="5.13"/>
           </svg>
         </a>
         <!-- /.custom-logo-link -->
@@ -44,7 +56,8 @@
       <!-- /.site-branding -->
       <!-- ============================================================= End Header Logo ============================================================= -->
       <div id="departments-menu" class="dropdown departments-menu">
-        <button class="btn dropdown-toggle btn-block" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn dropdown-toggle btn-block" type="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
           <i class="tm tm-departments-thin"></i>
           <span>All Departments</span>
         </button>
@@ -52,55 +65,47 @@
 
           @foreach($obTreeCategoryList as $obCategory)
 
-            <li class=" menu-item @if($obCategory->allChildren->isNotEmpty()) menu-item-has-children animate-dropdown dropdown-submenu yamm-tfw @else highlight animate-dropdown  @endif">
-              <a title="Value of the Day" @if($obCategory->allChildren->isNotEmpty()) data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" @endif href="home-v2.html">{{$obCategory->name}} @if($obCategory->allChildren->isNotEmpty()) <span class="caret"></span> @endif</a>
+            <li
+              class=" menu-item @if($obCategory->allChildren->isNotEmpty()) menu-item-has-children animate-dropdown dropdown-submenu yamm-tfw @else highlight animate-dropdown  @endif">
+              <a title="Value of the Day" @if($obCategory->allChildren->isNotEmpty()) data-toggle="dropdown"
+                 class="dropdown-toggle" aria-haspopup="true"
+                 @endif href="{{route('shop_show_category', $obCategory->slug )}}">{{$obCategory->name}} @if($obCategory->allChildren->isNotEmpty())
+                  <span class="caret"></span> @endif</a>
 
               @if($obCategory->allChildren->isNotEmpty())
                 <ul role="menu" class=" dropdown-menu">
 
-                    <li class="menu-item menu-item-object-static_block animate-dropdown">
-                      <div class="yamm-content">
-                        <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
-                          <div class="kc-col-container">
-                            <div class="kc_single_image">
-                              <img src="/assets/images/{{$obCategory->image}}" class="" alt="" />
-                            </div>
-                            <!-- .kc_single_image -->
+                  <li class="menu-item menu-item-object-static_block animate-dropdown">
+                    <div class="yamm-content">
+                      <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
+                        <div class="kc-col-container">
+                          <div class="kc_single_image">
+                            <img src="/assets/images/{{$obCategory->image}}" class="" alt=""/>
                           </div>
-                          <!-- .kc-col-container -->
                         </div>
-                        <!-- .bg-yamm-content -->
-                        <div class="row yamm-content-row">
-                          @foreach($obCategory->allChildren as $obCategoryChildren)
+                      </div>
+                      <div class="row yamm-content-row">
+                        @foreach($obCategory->allChildren as $obCategoryChildren)
                           <div class="col-md-6 col-sm-12">
                             <div class="kc-col-container">
                               <div class="kc_text_block">
-                                @if($obCategoryChildren->children->isNotEmpty())
-                                  <ul>
+                                <ul>
+                                  <li class="nav-title">{{$obCategoryChildren->name}}</li>
+                                  @if($obCategoryChildren->children->isNotEmpty())
                                     @foreach($obCategoryChildren->children as $obCategoryChildrenTwo)
-
-                                      @if ($loop->first)
-                                        <li class="nav-title">{{$obCategoryChildrenTwo->name}}</li>
-                                      @else
-                                        <li><a href="#">{{$obCategoryChildrenTwo->name}}</a></li>
-                                      @endif
-
+                                      <li><a
+                                          href="{{route('shop_show_category', $obCategoryChildrenTwo->slug )}}">{{$obCategoryChildrenTwo->name}}</a>
+                                      </li>
                                     @endforeach
-                                  </ul>
-                                @endif
+                                  @endif
+                                </ul>
                               </div>
-                              <!-- .kc_text_block -->
                             </div>
-                            <!-- .kc-col-container -->
                           </div>
-                          @endforeach
-                          <!-- .kc_column -->
-                          <!-- .kc_column -->
-                        </div>
-                        <!-- .kc_row -->
+                        @endforeach
                       </div>
-                      <!-- .yamm-content -->
-                    </li>
+                    </div>
+                  </li>
 
                 </ul>
               @endif
@@ -108,21 +113,22 @@
           @endforeach
         </ul>
       </div>
-      <!-- .departments-menu -->
       <form class="navbar-search" method="get" action="home-v1.html">
         <label class="sr-only screen-reader-text" for="search">Search for:</label>
         <div class="input-group">
-          <input type="text" id="search" class="form-control search-field product-search-field" dir="ltr" value="" name="s" placeholder="Search for products" />
+          <input type="text" id="search" class="form-control search-field product-search-field" dir="ltr" value=""
+                 name="s" placeholder="Search for products"/>
           <div class="input-group-addon search-categories popover-header">
             <select name='product_cat' id='product_cat' class='postform resizeselect'>
               @foreach($obAllCategoryList as $obCategory)
-                <option value='{{$obCategory->id}}'  @if ($loop->first) selected='selected' @endif >{{$obCategory->name}}</option>
+                <option value='{{$obCategory->id}}'
+                        @if ($loop->first) selected='selected' @endif >{{$obCategory->name}}</option>
               @endforeach
             </select>
           </div>
           <!-- .input-group-addon -->
           <div class="input-group-btn input-group-append">
-            <input type="hidden" id="search-param" name="post_type" value="product" />
+            <input type="hidden" id="search-param" name="post_type" value="product"/>
             <button type="submit" class="btn btn-primary">
               <i class="fa fa-search"></i>
               <span class="search-btn">Search</span>
@@ -167,7 +173,9 @@
                     <li class="woocommerce-mini-cart-item mini_cart_item">
                       <a href="#" class="remove" aria-label="Remove this item" data-product_id="65" data-product_sku="">×</a>
                       <a href="single-product-sidebar.html">
-                        <img src="user/assets/images/products/mini-cart1.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">XONE Wireless Controller&nbsp;
+                        <img src="user/assets/images/products/mini-cart1.jpg"
+                             class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">XONE Wireless
+                        Controller&nbsp;
                       </a>
                       <span class="quantity">1 ×
                                                             <span class="woocommerce-Price-amount amount">
@@ -177,7 +185,9 @@
                     <li class="woocommerce-mini-cart-item mini_cart_item">
                       <a href="#" class="remove" aria-label="Remove this item" data-product_id="27" data-product_sku="">×</a>
                       <a href="single-product-sidebar.html">
-                        <img src="user/assets/images/products/mini-cart2.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">Gear Virtual Reality 3D with Bluetooth Glasses&nbsp;
+                        <img src="user/assets/images/products/mini-cart2.jpg"
+                             class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">Gear Virtual
+                        Reality 3D with Bluetooth Glasses&nbsp;
                       </a>
                       <span class="quantity">1 ×
                                                             <span class="woocommerce-Price-amount amount">
@@ -189,7 +199,8 @@
                   <p class="woocommerce-mini-cart__total total">
                     <strong>Subtotal:</strong>
                     <span class="woocommerce-Price-amount amount">
-                                                        <span class="woocommerce-Price-currencySymbol">$</span>136.99</span>
+                                                        <span
+                                                          class="woocommerce-Price-currencySymbol">$</span>136.99</span>
                   </p>
                   <p class="woocommerce-mini-cart__buttons buttons">
                     <a href="cart.html" class="button wc-forward">View cart</a>
@@ -253,23 +264,35 @@
                   }
                 </style>
               </defs>
-              <polygon class="cls-1" points="171.63 0.91 171.63 11 170.63 11 170.63 0.91 170.63 0.84 170.63 0.06 176 0.06 176 0.91 171.63 0.91" />
-              <rect class="cls-2" x="166.19" y="0.06" width="3.47" height="0.84" />
-              <rect class="cls-2" x="159.65" y="4.81" width="3.51" height="0.84" />
-              <polygon class="cls-1" points="158.29 11 157.4 11 157.4 0.06 158.26 0.06 158.36 0.06 164.89 0.06 164.89 0.87 158.36 0.87 158.36 10.19 164.99 10.19 164.99 11 158.36 11 158.29 11" />
-              <polygon class="cls-1" points="149.54 6.61 150.25 5.95 155.72 10.98 154.34 10.98 149.54 6.61" />
-              <polygon class="cls-1" points="147.62 10.98 146.65 10.98 146.65 0.05 147.62 0.05 147.62 5.77 153.6 0.33 154.91 0.33 147.62 7.05 147.62 10.98" />
-              <path class="cls-1" d="M156.39,24h-1.25s-0.49-.39-0.71-0.59l-1.35-1.25c-0.25-.23-0.68-0.66-0.68-0.66s0-.46,0-0.72a3.56,3.56,0,0,0,3.54-2.87,3.36,3.36,0,0,0-3.22-4H148.8V24h-1V13.06h5c2.34,0.28,4,1.72,4.12,4a4.26,4.26,0,0,1-3.38,4.34C154.48,22.24,156.39,24,156.39,24Z" transform="translate(-12 -13)" />
-              <polygon class="cls-1" points="132.04 2.09 127.09 7.88 130.78 7.88 130.78 8.69 126.4 8.69 124.42 11 123.29 11 132.65 0 133.04 0 133.04 11 132.04 11 132.04 2.09" />
-              <polygon class="cls-1" points="120.97 2.04 116.98 6.15 116.98 6.19 116.97 6.17 116.95 6.19 116.95 6.15 112.97 2.04 112.97 11 112 11 112 0 112.32 0 116.97 4.8 121.62 0 121.94 0 121.94 11 120.97 11 120.97 2.04" />
-              <ellipse class="cls-3" cx="116.3" cy="22.81" rx="5.15" ry="5.18" />
-              <rect class="cls-2" x="99.13" y="0.44" width="5.87" height="27.12" />
-              <polygon class="cls-1" points="85.94 27.56 79.92 27.56 79.92 0.44 85.94 0.44 85.94 16.86 96.35 16.86 96.35 21.84 85.94 21.84 85.94 27.56" />
-              <path class="cls-1" d="M77.74,36.07a9,9,0,0,0,6.41-2.68L88,37c-2.6,2.74-6.71,4-10.89,4A13.94,13.94,0,0,1,62.89,27.15,14.19,14.19,0,0,1,77.11,13c4.38,0,8.28,1.17,10.89,4,0,0-3.89,3.82-3.91,3.8A9,9,0,1,0,77.74,36.07Z" transform="translate(-12 -13)" />
-              <rect class="cls-2" x="37.4" y="11.14" width="7.63" height="4.98" />
-              <polygon class="cls-1" points="32.85 27.56 28.6 27.56 28.6 5.42 28.6 3.96 28.6 0.44 47.95 0.44 47.95 5.42 34.46 5.42 34.46 22.72 48.25 22.72 48.25 27.56 34.46 27.56 32.85 27.56" />
-              <polygon class="cls-1" points="15.4 27.56 9.53 27.56 9.53 5.57 9.53 0.59 9.53 0.44 24.93 0.44 24.93 5.57 15.4 5.57 15.4 27.56" />
-              <rect class="cls-2" y="0.44" width="7.19" height="5.13" />
+              <polygon class="cls-1"
+                       points="171.63 0.91 171.63 11 170.63 11 170.63 0.91 170.63 0.84 170.63 0.06 176 0.06 176 0.91 171.63 0.91"/>
+              <rect class="cls-2" x="166.19" y="0.06" width="3.47" height="0.84"/>
+              <rect class="cls-2" x="159.65" y="4.81" width="3.51" height="0.84"/>
+              <polygon class="cls-1"
+                       points="158.29 11 157.4 11 157.4 0.06 158.26 0.06 158.36 0.06 164.89 0.06 164.89 0.87 158.36 0.87 158.36 10.19 164.99 10.19 164.99 11 158.36 11 158.29 11"/>
+              <polygon class="cls-1" points="149.54 6.61 150.25 5.95 155.72 10.98 154.34 10.98 149.54 6.61"/>
+              <polygon class="cls-1"
+                       points="147.62 10.98 146.65 10.98 146.65 0.05 147.62 0.05 147.62 5.77 153.6 0.33 154.91 0.33 147.62 7.05 147.62 10.98"/>
+              <path class="cls-1"
+                    d="M156.39,24h-1.25s-0.49-.39-0.71-0.59l-1.35-1.25c-0.25-.23-0.68-0.66-0.68-0.66s0-.46,0-0.72a3.56,3.56,0,0,0,3.54-2.87,3.36,3.36,0,0,0-3.22-4H148.8V24h-1V13.06h5c2.34,0.28,4,1.72,4.12,4a4.26,4.26,0,0,1-3.38,4.34C154.48,22.24,156.39,24,156.39,24Z"
+                    transform="translate(-12 -13)"/>
+              <polygon class="cls-1"
+                       points="132.04 2.09 127.09 7.88 130.78 7.88 130.78 8.69 126.4 8.69 124.42 11 123.29 11 132.65 0 133.04 0 133.04 11 132.04 11 132.04 2.09"/>
+              <polygon class="cls-1"
+                       points="120.97 2.04 116.98 6.15 116.98 6.19 116.97 6.17 116.95 6.19 116.95 6.15 112.97 2.04 112.97 11 112 11 112 0 112.32 0 116.97 4.8 121.62 0 121.94 0 121.94 11 120.97 11 120.97 2.04"/>
+              <ellipse class="cls-3" cx="116.3" cy="22.81" rx="5.15" ry="5.18"/>
+              <rect class="cls-2" x="99.13" y="0.44" width="5.87" height="27.12"/>
+              <polygon class="cls-1"
+                       points="85.94 27.56 79.92 27.56 79.92 0.44 85.94 0.44 85.94 16.86 96.35 16.86 96.35 21.84 85.94 21.84 85.94 27.56"/>
+              <path class="cls-1"
+                    d="M77.74,36.07a9,9,0,0,0,6.41-2.68L88,37c-2.6,2.74-6.71,4-10.89,4A13.94,13.94,0,0,1,62.89,27.15,14.19,14.19,0,0,1,77.11,13c4.38,0,8.28,1.17,10.89,4,0,0-3.89,3.82-3.91,3.8A9,9,0,1,0,77.74,36.07Z"
+                    transform="translate(-12 -13)"/>
+              <rect class="cls-2" x="37.4" y="11.14" width="7.63" height="4.98"/>
+              <polygon class="cls-1"
+                       points="32.85 27.56 28.6 27.56 28.6 5.42 28.6 3.96 28.6 0.44 47.95 0.44 47.95 5.42 34.46 5.42 34.46 22.72 48.25 22.72 48.25 27.56 34.46 27.56 32.85 27.56"/>
+              <polygon class="cls-1"
+                       points="15.4 27.56 9.53 27.56 9.53 5.57 9.53 0.59 9.53 0.44 24.93 0.44 24.93 5.57 15.4 5.57 15.4 27.56"/>
+              <rect class="cls-2" y="0.44" width="7.19" height="5.13"/>
             </svg>
           </a>
           <!-- /.custom-logo-link -->
@@ -321,14 +344,15 @@
                   <a title="New Arrivals" href="shop.html">New Arrivals</a>
                 </li>
                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown dropdown-submenu">
-                  <a title="Computers &amp; Laptops" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="#">Computers &#038; Laptops <span class="caret"></span></a>
+                  <a title="Computers &amp; Laptops" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true"
+                     href="#">Computers &#038; Laptops <span class="caret"></span></a>
                   <ul role="menu" class=" dropdown-menu">
                     <li class="menu-item menu-item-object-static_block animate-dropdown">
                       <div class="yamm-content">
                         <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
                           <div class="kc-col-container">
                             <div class="kc_single_image">
-                              <img src="user/assets/images/megamenu.jpg" class="" alt="" />
+                              <img src="user/assets/images/megamenu.jpg" class="" alt=""/>
                             </div>
                             <!-- .kc_single_image -->
                           </div>
@@ -384,14 +408,15 @@
                   </ul>
                 </li>
                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown dropdown-submenu">
-                  <a title="Cameras &amp; Photo" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="#">Cameras &#038; Photo <span class="caret"></span></a>
+                  <a title="Cameras &amp; Photo" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true"
+                     href="#">Cameras &#038; Photo <span class="caret"></span></a>
                   <ul role="menu" class=" dropdown-menu">
                     <li class="menu-item menu-item-object-static_block animate-dropdown">
                       <div class="yamm-content">
                         <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
                           <div class="kc-col-container">
                             <div class="kc_single_image">
-                              <img src="user/assets/images/megamenu-1.jpg" class="" alt="" />
+                              <img src="user/assets/images/megamenu-1.jpg" class="" alt=""/>
                             </div>
                             <!-- .kc_single_image -->
                           </div>
@@ -449,14 +474,15 @@
                   </ul>
                 </li>
                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown dropdown-submenu">
-                  <a title="Smart Phones &amp; Tablets" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="#">Smart Phones &#038; Tablets 	<span class="caret"></span></a>
+                  <a title="Smart Phones &amp; Tablets" data-toggle="dropdown" class="dropdown-toggle"
+                     aria-haspopup="true" href="#">Smart Phones &#038; Tablets <span class="caret"></span></a>
                   <ul role="menu" class=" dropdown-menu">
                     <li class="menu-item menu-item-object-static_block animate-dropdown">
                       <div class="yamm-content">
                         <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
                           <div class="kc-col-container">
                             <div class="kc_single_image">
-                              <img src="user/assets/images/megamenu.jpg" class="" alt="" />
+                              <img src="user/assets/images/megamenu.jpg" class="" alt=""/>
                             </div>
                             <!-- .kc_single_image -->
                           </div>
@@ -512,14 +538,15 @@
                   </ul>
                 </li>
                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown dropdown-submenu">
-                  <a title="Video Games &amp; Consoles" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="#">Video Games &#038; Consoles <span class="caret"></span></a>
+                  <a title="Video Games &amp; Consoles" data-toggle="dropdown" class="dropdown-toggle"
+                     aria-haspopup="true" href="#">Video Games &#038; Consoles <span class="caret"></span></a>
                   <ul role="menu" class=" dropdown-menu">
                     <li class="menu-item menu-item-object-static_block animate-dropdown">
                       <div class="yamm-content">
                         <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
                           <div class="kc-col-container">
                             <div class="kc_single_image">
-                              <img src="user/assets/images/megamenu-1.jpg" class="" alt="" />
+                              <img src="user/assets/images/megamenu-1.jpg" class="" alt=""/>
                             </div>
                             <!-- .kc_single_image -->
                           </div>
@@ -577,14 +604,15 @@
                   </ul>
                 </li>
                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown dropdown-submenu">
-                  <a title="TV &amp; Audio" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="#">TV &#038; Audio <span class="caret"></span></a>
+                  <a title="TV &amp; Audio" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true"
+                     href="#">TV &#038; Audio <span class="caret"></span></a>
                   <ul role="menu" class=" dropdown-menu">
                     <li class="menu-item menu-item-object-static_block animate-dropdown">
                       <div class="yamm-content">
                         <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
                           <div class="kc-col-container">
                             <div class="kc_single_image">
-                              <img src="user/assets/images/megamenu.jpg" class="" alt="" />
+                              <img src="user/assets/images/megamenu.jpg" class="" alt=""/>
                             </div>
                             <!-- .kc_single_image -->
                           </div>
@@ -640,14 +668,15 @@
                   </ul>
                 </li>
                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown dropdown-submenu">
-                  <a title="Car Electronic &amp; GPS" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="#">Car Electronic &#038; GPS <span class="caret"></span></a>
+                  <a title="Car Electronic &amp; GPS" data-toggle="dropdown" class="dropdown-toggle"
+                     aria-haspopup="true" href="#">Car Electronic &#038; GPS <span class="caret"></span></a>
                   <ul role="menu" class=" dropdown-menu">
                     <li class="menu-item menu-item-object-static_block animate-dropdown">
                       <div class="yamm-content">
                         <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
                           <div class="kc-col-container">
                             <div class="kc_single_image">
-                              <img src="user/assets/images/megamenu-1.jpg" class="" alt="" />
+                              <img src="user/assets/images/megamenu-1.jpg" class="" alt=""/>
                             </div>
                             <!-- .kc_single_image -->
                           </div>
@@ -705,14 +734,15 @@
                   </ul>
                 </li>
                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown dropdown-submenu">
-                  <a title="Accesories" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="#">Accesories <span class="caret"></span></a>
+                  <a title="Accesories" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="#">Accesories
+                    <span class="caret"></span></a>
                   <ul role="menu" class=" dropdown-menu">
                     <li class="menu-item menu-item-object-static_block animate-dropdown">
                       <div class="yamm-content">
                         <div class="bg-yamm-content bg-yamm-content-bottom bg-yamm-content-right">
                           <div class="kc-col-container">
                             <div class="kc_single_image">
-                              <img src="user/assets/images/megamenu.jpg" class="" alt="" />
+                              <img src="user/assets/images/megamenu.jpg" class="" alt=""/>
                             </div>
                             <!-- .kc_single_image -->
                           </div>
@@ -782,9 +812,10 @@
             <div class="widget woocommerce widget_product_search">
               <form role="search" method="get" class="woocommerce-product-search" action="home-v1.html">
                 <label class="screen-reader-text" for="woocommerce-product-search-field-0">Search for:</label>
-                <input type="search" id="woocommerce-product-search-field-0" class="search-field" placeholder="Search products&hellip;" value="" name="s" />
-                <input type="submit" value="Search" />
-                <input type="hidden" name="post_type" value="product" />
+                <input type="search" id="woocommerce-product-search-field-0" class="search-field"
+                       placeholder="Search products&hellip;" value="" name="s"/>
+                <input type="submit" value="Search"/>
+                <input type="hidden" name="post_type" value="product"/>
               </form>
             </div>
             <!-- .widget -->
