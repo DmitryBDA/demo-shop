@@ -40,6 +40,9 @@ Route::group(['prefix' => 'category/{category}'], function () {
   Route::get('/', ['as' => 'shop_show_category', 'uses' => 'App\Http\Controllers\Shop\User\CategoryController@category']);
 });
 
+Route::get('/search/autocomplete',[App\Http\Controllers\Shop\User\ProductController::class, 'searchAutocompilation'])->name('search.autocompilation');
+Route::get('/search', [ProductController::class, 'search'])->name('search');
+
 Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
 Route::post('cart', [CartController::class, 'addToCart'])->name('cart.store');
 Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');

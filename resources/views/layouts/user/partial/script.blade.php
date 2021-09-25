@@ -12,4 +12,16 @@
 <script type="text/javascript" src="user/assets/js/pace.min.js"></script>
 <script type="text/javascript" src="user/assets/js/slick.min.js"></script>
 <script type="text/javascript" src="user/assets/js/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+<script type="text/javascript">
+  var path = "{{ route('search.autocompilation') }}";
+  $('#search').typeahead({
+    minLength: 2,
+    source:  function (query, process) {
+      return $.get(path, { query: query }, function (data) {
+        return process(data);
+      });
+    }
+  });
+</script>
 <script src="{{mix('/assets/js/main.js')}}"></script>
