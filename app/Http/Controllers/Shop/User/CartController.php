@@ -42,10 +42,11 @@ class CartController extends Controller
         ],
       ]
     );
+    $obCartList = \Cart::getContent();
 
-    session()->flash('success', 'Item Cart is Updated Successfully !');
-
-    return redirect()->route('cart.list');
+    $data['info-cart'] = view('layouts.user.partial.header.ajax-elem.info-cart')->render();
+    $data['product-list'] = view('pages.user.cart.cart-wrapper', compact('obCartList'))->render();
+    return $data;
   }
 
   public function removeCart(Request $request)

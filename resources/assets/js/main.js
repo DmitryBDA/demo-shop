@@ -97,3 +97,27 @@ $(document).on('click', '._remove_from_cart', function(e) {
     }
   })
 });
+$(document).on("focusout",'._ajax_quantity', (elem) => {
+  const product_id = $(elem.target).attr('data-product-id');
+  const quantity = $(elem.target).val();
+
+
+
+  $.ajax({
+    url: "/update-cart",
+    type: "POST",
+    data: {
+      id: product_id,
+      quantity: quantity,
+    },
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+    success: (data) => {
+
+      $('._info_cart_wrapper').html(data['info-cart'])
+      $('._cart-wrapper').html(data['product-list'])
+
+    }
+  })
+});

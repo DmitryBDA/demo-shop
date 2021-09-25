@@ -4,10 +4,10 @@
     <tr>
       <th class="product-remove">&nbsp;</th>
       <th class="product-thumbnail">&nbsp;</th>
-      <th class="product-name">Product</th>
-      <th class="product-price">Price</th>
-      <th class="product-quantity">Quantity</th>
-      <th class="product-subtotal">Total</th>
+      <th class="product-name">Название</th>
+      <th class="product-price">Цена</th>
+      <th class="product-quantity">Количество</th>
+      <th class="product-subtotal">Итого</th>
     </tr>
     </thead>
     <tbody>
@@ -34,21 +34,21 @@
           </div>
         </td>
         <td data-title="Price" class="product-price">
-                              <span class="woocommerce-Price-amount amount">
-                                  <span class="woocommerce-Price-currencySymbol"></span>{{$item->price}}
-                              </span>Р
+        <span class="woocommerce-Price-amount amount">
+            <span class="woocommerce-Price-currencySymbol"></span>{{$item->price}}
+        </span>Р
         </td>
         <td class="product-quantity" data-title="Quantity">
           <div class="quantity">
             <label for="quantity-input-1">Quantity</label>
-            <input id="quantity-input-1" type="number" name="" value="{{$item->quantity}}"
-                   title="Qty" class="input-text qty text" size="4">
+            <input data-product-id="{{$item->id}}" id="quantity" type="number" name="quantity" value="{{$item->quantity}}"
+                   title="Qty" class="input-text qty text _ajax_quantity" size="4">
           </div>
         </td>
         <td data-title="Total" class="product-subtotal">
-                              <span class="woocommerce-Price-amount amount">
-                                  <span class="woocommerce-Price-currencySymbol"></span>{{$item->price * $item->quantity}} Р
-                              </span>
+          <span class="woocommerce-Price-amount amount">
+              <span class="woocommerce-Price-currencySymbol"></span>{{$item->price * $item->quantity}} Р
+          </span>
           <a data-product-id="{{$item->id}}" title="Remove this item" class="remove _remove_from_cart" href="#">×</a>
         </td>
       </tr>
@@ -90,7 +90,8 @@
         <td data-title="Total">
           <strong>
                                 <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol"></span>{{ Cart::getTotal() }}</span> Р
+                                    <span class="woocommerce-Price-currencySymbol"></span>{{ Cart::getTotal() }}</span>
+            Р
           </strong>
         </td>
       </tr>
@@ -128,68 +129,68 @@
               </select>
             </p>
             <p id="calc_shipping_state_field" class="form-row form-row-wide validate-required">
-                                                                            <span>
-                                                                                <select id="calc_shipping_state"
-                                                                                        name="calc_shipping_state">
-                                                                                    <option
-                                                                                      value="">Select an option…</option>
-                                                                                    <option
-                                                                                      value="AP">Andhra Pradesh</option>
-                                                                                    <option
-                                                                                      value="AR">Arunachal Pradesh</option>
-                                                                                    <option value="AS">Assam</option>
-                                                                                    <option value="BR">Bihar</option>
-                                                                                    <option
-                                                                                      value="CT">Chhattisgarh</option>
-                                                                                    <option value="GA">Goa</option>
-                                                                                    <option value="GJ">Gujarat</option>
-                                                                                    <option value="HR">Haryana</option>
-                                                                                    <option
-                                                                                      value="HP">Himachal Pradesh</option>
-                                                                                    <option
-                                                                                      value="JK">Jammu and Kashmir</option>
-                                                                                    <option
-                                                                                      value="JH">Jharkhand</option>
-                                                                                    <option
-                                                                                      value="KA">Karnataka</option>
-                                                                                    <option value="KL">Kerala</option>
-                                                                                    <option
-                                                                                      value="MP">Madhya Pradesh</option>
-                                                                                    <option
-                                                                                      value="MH">Maharashtra</option>
-                                                                                    <option value="MN">Manipur</option>
-                                                                                    <option
-                                                                                      value="ML">Meghalaya</option>
-                                                                                    <option value="MZ">Mizoram</option>
-                                                                                    <option value="NL">Nagaland</option>
-                                                                                    <option value="OR">Orissa</option>
-                                                                                    <option value="PB">Punjab</option>
-                                                                                    <option
-                                                                                      value="RJ">Rajasthan</option>
-                                                                                    <option value="SK">Sikkim</option>
-                                                                                    <option
-                                                                                      value="TN">Tamil Nadu</option>
-                                                                                    <option
-                                                                                      value="TS">Telangana</option>
-                                                                                    <option value="TR">Tripura</option>
-                                                                                    <option
-                                                                                      value="UK">Uttarakhand</option>
-                                                                                    <option
-                                                                                      value="UP">Uttar Pradesh</option>
-                                                                                    <option
-                                                                                      value="WB">West Bengal</option>
-                                                                                    <option value="AN">Andaman and Nicobar Islands</option>
-                                                                                    <option
-                                                                                      value="CH">Chandigarh</option>
-                                                                                    <option value="DN">Dadra and Nagar Haveli</option>
-                                                                                    <option
-                                                                                      value="DD">Daman and Diu</option>
-                                                                                    <option value="DL">Delhi</option>
-                                                                                    <option
-                                                                                      value="LD">Lakshadeep</option>
-                                                                                    <option value="PY">Pondicherry (Puducherry)</option>
-                                                                                </select>
-                                                                            </span>
+            <span>
+                <select id="calc_shipping_state"
+                        name="calc_shipping_state">
+                    <option
+                      value="">Select an option…</option>
+                    <option
+                      value="AP">Andhra Pradesh</option>
+                    <option
+                      value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option
+                      value="CT">Chhattisgarh</option>
+                    <option value="GA">Goa</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="HR">Haryana</option>
+                    <option
+                      value="HP">Himachal Pradesh</option>
+                    <option
+                      value="JK">Jammu and Kashmir</option>
+                    <option
+                      value="JH">Jharkhand</option>
+                    <option
+                      value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option
+                      value="MP">Madhya Pradesh</option>
+                    <option
+                      value="MH">Maharashtra</option>
+                    <option value="MN">Manipur</option>
+                    <option
+                      value="ML">Meghalaya</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OR">Orissa</option>
+                    <option value="PB">Punjab</option>
+                    <option
+                      value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option
+                      value="TN">Tamil Nadu</option>
+                    <option
+                      value="TS">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option
+                      value="UK">Uttarakhand</option>
+                    <option
+                      value="UP">Uttar Pradesh</option>
+                    <option
+                      value="WB">West Bengal</option>
+                    <option value="AN">Andaman and Nicobar Islands</option>
+                    <option
+                      value="CH">Chandigarh</option>
+                    <option value="DN">Dadra and Nagar Haveli</option>
+                    <option
+                      value="DD">Daman and Diu</option>
+                    <option value="DL">Delhi</option>
+                    <option
+                      value="LD">Lakshadeep</option>
+                    <option value="PY">Pondicherry (Puducherry)</option>
+                </select>
+            </span>
             </p>
             <p id="calc_shipping_postcode_field" class="form-row form-row-wide validate-required">
               <input type="text" id="calc_shipping_postcode" name="calc_shipping_postcode"
